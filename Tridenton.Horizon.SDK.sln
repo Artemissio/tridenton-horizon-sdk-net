@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tridenton.Horizon.SDK.Core"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D6A6087E-C2EB-4D5B-BE8D-AC59E2A87AE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tridenton.Horizon.SDK.EventLink", "src\Services\EventLink\Tridenton.Horizon.SDK.EventLink.csproj", "{275BDACB-9CCE-4AAD-A809-6BB78858EB5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tridenton.Horizon.SDK.CDC", "src\Services\CDC\Tridenton.Horizon.SDK.CDC.csproj", "{268713D2-A7D2-4145-B2B9-F012501457C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +16,12 @@ Global
 		{F7844CF7-2667-4B4E-AAA0-972E9A1B0099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7844CF7-2667-4B4E-AAA0-972E9A1B0099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7844CF7-2667-4B4E-AAA0-972E9A1B0099}.Release|Any CPU.Build.0 = Release|Any CPU
-		{275BDACB-9CCE-4AAD-A809-6BB78858EB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{275BDACB-9CCE-4AAD-A809-6BB78858EB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{275BDACB-9CCE-4AAD-A809-6BB78858EB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{275BDACB-9CCE-4AAD-A809-6BB78858EB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{268713D2-A7D2-4145-B2B9-F012501457C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{268713D2-A7D2-4145-B2B9-F012501457C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{268713D2-A7D2-4145-B2B9-F012501457C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{268713D2-A7D2-4145-B2B9-F012501457C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{275BDACB-9CCE-4AAD-A809-6BB78858EB5E} = {D6A6087E-C2EB-4D5B-BE8D-AC59E2A87AE1}
+		{268713D2-A7D2-4145-B2B9-F012501457C1} = {D6A6087E-C2EB-4D5B-BE8D-AC59E2A87AE1}
 	EndGlobalSection
 EndGlobal
