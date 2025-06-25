@@ -4,6 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>Tridenton.Horizon.SDK.CDC</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Artem Tarasenko</Authors>
+    <Company>Tridenton</Company>
   </PropertyGroup>
 
   <ItemGroup>
