@@ -7,9 +7,9 @@ namespace Tridenton.Horizon.SDK.CDC.Models;
 [JsonConverter(typeof(EnumerationJsonConverter<DataConnector>))]
 public sealed class OutputChannel : Enumeration
 {
-    private OutputChannel(int index, string value) : base(index, value) { }
+    private OutputChannel(string value) : base(value) { }
     
-    public static readonly OutputChannel None = new(0, string.Empty);
-    public static readonly OutputChannel Webhooks = new(1, "Webhooks");
-    public static readonly OutputChannel RabbitMq = new(2, "RabbitMq");
+    public static readonly OutputChannel None = new(string.Empty);
+    public static readonly OutputChannel Webhooks = new("Webhooks");
+    public static readonly OutputChannel RabbitMq = new("RabbitMq");
 }

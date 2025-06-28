@@ -7,9 +7,9 @@ namespace Tridenton.Horizon.SDK.CDC.Models;
 [JsonConverter(typeof(EnumerationJsonConverter<StreamStatus>))]
 public sealed class StreamStatus : Enumeration
 {
-    private StreamStatus(int index, string value) : base(index, value) { }
+    private StreamStatus(string value) : base(value) { }
 
-    public static readonly StreamStatus Empty = new(0, "Empty");
-    public static readonly StreamStatus Ok = new(1, "OK");
-    public static readonly StreamStatus Full = new(2, "Full");
+    public static readonly StreamStatus Empty = new("Empty");
+    public static readonly StreamStatus Ok = new("OK");
+    public static readonly StreamStatus Full = new("Full");
 }

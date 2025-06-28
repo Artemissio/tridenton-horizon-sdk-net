@@ -8,10 +8,10 @@ namespace Tridenton.Horizon.SDK.CDC.Models.OutputChannels;
 public sealed record WebhookSettings : IOutputChannelSettingsMarker
 {
     [Required(ErrorMessage = "HTTP method is required")]
-    public WebhookHttpMethod HttpMethod { get; init; }
+    public required WebhookHttpMethod HttpMethod { get; init; }
 
     [Required(ErrorMessage = "HTTP URL is required")]
-    public string Url { get; set; }
+    public required string Url { get; init; }
 
     public WebhookSettings()
     {
@@ -23,13 +23,13 @@ public sealed record WebhookSettings : IOutputChannelSettingsMarker
 [JsonConverter(typeof(EnumerationJsonConverter<WebhookHttpMethod>))]
 public sealed class WebhookHttpMethod : Enumeration
 {
-    private WebhookHttpMethod(int index, string value) : base(index, value) { }
+    private WebhookHttpMethod(string value) : base(value) { }
 
-    public static readonly WebhookHttpMethod Get = new(1, "GET");
-    public static readonly WebhookHttpMethod Post = new(2, "POST");
-    public static readonly WebhookHttpMethod Put = new(3, "PUT");
-    public static readonly WebhookHttpMethod Patch = new(4, "PATCH");
-    public static readonly WebhookHttpMethod Delete = new(5, "DELETE");
+    public static readonly WebhookHttpMethod Get = new("GET");
+    public static readonly WebhookHttpMethod Post = new("POST");
+    public static readonly WebhookHttpMethod Put = new("PUT");
+    public static readonly WebhookHttpMethod Patch = new("PATCH");
+    public static readonly WebhookHttpMethod Delete = new("DELETE");
 }
 
 public sealed record WebhooksAuthorizationSettings

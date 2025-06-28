@@ -8,11 +8,11 @@ namespace Tridenton.Horizon.SDK.CDC.Models;
 [JsonConverter(typeof(EnumerationJsonConverter<EventType>))]
 public sealed class EventType : Enumeration
 {
-    private EventType(int index, string value) : base(index, value) { }
+    private EventType(string value) : base(value) { }
 
-    public static readonly EventType None = new(0, string.Empty);
-    public static readonly EventType All = new(1, Constants.Wildcard);
-    public static readonly EventType Create = new(2, "Create");
-    public static readonly EventType Update = new(3, "Update");
-    public static readonly EventType Delete = new(4, "Delete");
+    public static readonly EventType None = new(string.Empty);
+    public static readonly EventType All = new(Constants.Wildcard);
+    public static readonly EventType Create = new("Create");
+    public static readonly EventType Update = new("Update");
+    public static readonly EventType Delete = new("Delete");
 }
