@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Tridenton.Horizon.SDK.CDC.Utilities;
 
 namespace Tridenton.Horizon.SDK.CDC.Models.OutputChannels;
 
@@ -10,6 +12,7 @@ public interface IOutputChannelSettingsMarker {}
 /// <summary>
 /// 
 /// </summary>
+[JsonConverter(typeof(OutputChannelSettingsJsonConverter))]
 public sealed record OutputChannelSettings
 {
     /// <summary>

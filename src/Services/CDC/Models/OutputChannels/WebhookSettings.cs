@@ -5,14 +5,18 @@ using Tridenton.Core.Utilities.Converters;
 
 namespace Tridenton.Horizon.SDK.CDC.Models.OutputChannels;
 
-public sealed record WebhooksSettings : IOutputChannelSettingsMarker
+public sealed record WebhookSettings : IOutputChannelSettingsMarker
 {
     [Required(ErrorMessage = "HTTP method is required")]
     public WebhookHttpMethod HttpMethod { get; init; }
 
-    public WebhooksSettings()
+    [Required(ErrorMessage = "HTTP URL is required")]
+    public string Url { get; set; }
+
+    public WebhookSettings()
     {
         HttpMethod = WebhookHttpMethod.Get;
+        Url = string.Empty;
     }
 }
 

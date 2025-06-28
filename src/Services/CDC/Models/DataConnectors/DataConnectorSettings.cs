@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Tridenton.Horizon.SDK.CDC.Utilities;
 
 namespace Tridenton.Horizon.SDK.CDC.Models.DataConnectors;
 
@@ -10,12 +12,13 @@ public interface IDataConnectorSettingsMarker {}
 /// <summary>
 /// 
 /// </summary>
+[JsonConverter(typeof(DataConnectorSettingsJsonConverter))]
 public sealed record DataConnectorSettings
 {
     /// <summary>
     /// 
     /// </summary>
-    [Required(ErrorMessage = "Channel is required")]
+    [Required(ErrorMessage = "Connector is required")]
     public required DataConnector Connector { get; init; }
 
     /// <summary>
